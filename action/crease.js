@@ -1,12 +1,12 @@
 import actions from '../constants/actionTypes';
 
-export function increase(){
-    return {
-        type: actions.INCREASE
-    }
+export const increase = () =>{
+  return {
+    type: actions.INCREASE
+  }
 }
 
-export function decrease(){
+export const decrease = () => {
   return {
     type: actions.DECREASE
   }

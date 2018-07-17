@@ -5,38 +5,37 @@ import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 class Show extends Component{
-    render(){
-        const {value,actions} =this.props;
-        return (
-          <div>
-             <button onClick={actions.decrease}>-</button>
-             <span>{value}</span>
-             <button onClick={actions.increase}>+</button>
-          </div>
-            )
-    }
+  render(){
+    const {value,actions} =this.props;
+    return (
+      <div>
+        <button onClick={actions.decrease}>-</button>
+          <span>{value}</span>
+        <button onClick={actions.increase}>+</button>
+      </div>
+    )
+  }
 }
 
 Show.propTypes={
-    value: PropTypes.number.isRequired,
-    actions: PropTypes.shape({
-      increase: PropTypes.func.isRequired,
-      decrease: PropTypes.func.isRequired
-    }).isRequired
+  value: PropTypes.number.isRequired,
+  actions: PropTypes.shape({
+    increase: PropTypes.func.isRequired,
+    decrease: PropTypes.func.isRequired
+  }).isRequired
 }
 
-function mapStateToProps(state){
-    return {
-        value: state.count
-    };
+const mapStateToProps = (state) => {
+  return {
+    value: state.count
+  };
 }
 
-function mapDispatchToProps(dispatch){
-    const actions=Object.assign({},action);
+const mapDispatchToProps = (dispatch) => {
+  const actions=Object.assign({},action);
   return {
     actions: bindActionCreators(actions,dispatch)
   };
 } 
 
 export default connect(mapStateToProps,mapDispatchToProps)(Show);
-

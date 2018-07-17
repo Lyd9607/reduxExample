@@ -1,12 +1,12 @@
 import actions from '../constants/actionTypes';
 
 const initState={
-    count: 0
+  count: 0
 };
 
-export default function(state=initState,action){
+export default function(state=initState,action) {
   const count = state.count;
-  switch (action.type){
+  switch (action.type) {
     case actions.INCREASE: 
        return {count: count+1};
     case actions.DECREASE:
