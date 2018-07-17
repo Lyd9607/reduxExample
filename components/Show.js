@@ -1,17 +1,17 @@
 import * as action from '../action/crease';
-import React,{Component} from 'react';
+import React,{ Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-class Show extends Component{
-  render(){
+class Show extends Component {
+  render() {
     const {value,actions} =this.props;
     return (
       <div>
-        <button onClick={actions.decrease}>-</button>
+        <button onClick={actions.decrease}> - </button>
           <span>{value}</span>
-        <button onClick={actions.increase}>+</button>
+        <button onClick={actions.increase}> + </button>
       </div>
     )
   }

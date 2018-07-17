@@ -1,6 +1,6 @@
 import actions from '../constants/actionTypes';
 
-const initState={
+const initState= {
   count: 0
 };
 

@@ -1,6 +1,6 @@
 import actions from '../constants/actionTypes';
 
-export const increase = () =>{
+export const increase = () => {
   return {
     type: actions.INCREASE
   }
